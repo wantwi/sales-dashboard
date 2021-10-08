@@ -4,11 +4,11 @@ import { useTheme } from '@material-ui/core/styles';
 
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import TrendingDownIcon from '@material-ui/icons/TrendingDown';
-import MonetizationOnTwoTone from '@material-ui/icons/MonetizationOnTwoTone';
+import MonetizationOn from '@material-ui/icons/MonetizationOnTwoTone';
 import DescriptionTwoTone from '@material-ui/icons/DescriptionTwoTone';
 import ThumbUpAltTwoTone from '@material-ui/icons/ThumbUpAltTwoTone';
 import CalendarTodayTwoTone from '@material-ui/icons/CalendarTodayTwoTone';
-
+import * as BaIcon from 'react-icons/bs';
 import SalesLineCard from './SalesLineCard';
 import SalesLineCardData from './chart/sale-chart-1';
 
@@ -19,6 +19,8 @@ import ReportCard from './ReportCard';
 import LatestorderCard from './LatestorderCard';
 
 import { gridSpacing } from './../../../store/constant';
+import * as FaIcons from 'react-icons/fa';
+import ButtonIcon from '../../../component/Buttons/ButtonIcon';
 
 const useStyles = makeStyles((theme) => ({
     arrowicon: {
@@ -64,31 +66,36 @@ const Default = () => {
                 <Grid container spacing={gridSpacing}>
                     <Grid item lg={4} sm={6} xs={12}>
                         <ReportCard
-                            primary="$30200"
+                            primary="1,024"
                             secondary="All Earnings"
-                            color={theme.palette.warning.main}
-                            footerData="10% changes on profit"
-                            iconPrimary={MonetizationOnTwoTone}
+                            color="#6F29CC"
+                            background="#C9A4F4"
+                            footerData="15%"
+                            iconPrimary={BaIcon.BsFillCartFill}
                             iconFooter={TrendingUpIcon}
                         />
                     </Grid>
                     <Grid item lg={4} sm={6} xs={12}>
                         <ReportCard
-                            primary={145}
+                            primary="$19,023.11"
                             secondary="Task"
-                            color={theme.palette.error.main}
-                            footerData="28% task performance"
-                            iconPrimary={CalendarTodayTwoTone}
+                            background="#ebf4fe"
+                            size="30px"
+                            color={theme.palette.primary.main}
+                            footerData="27%"
+                            iconPrimary={MonetizationOn}
                             iconFooter={TrendingDownIcon}
                         />
                     </Grid>
                     <Grid item lg={4} sm={6} xs={12}>
                         <ReportCard
-                            primary="290+"
+                            primary="$8,722.54"
                             secondary="Page Views"
-                            color={theme.palette.success.main}
-                            footerData="10k daily views"
-                            iconPrimary={DescriptionTwoTone}
+                            background="#fee86aba"
+                            size="30px"
+                            color={theme.palette.warning.main}
+                            footerData="8%"
+                            iconPrimary={FaIcons.FaWallet}
                             iconFooter={TrendingUpIcon}
                         />
                     </Grid>
@@ -111,8 +118,24 @@ const Default = () => {
                             <Grid item xs={12} sm={6} lg={8}>
                                 <RevenuChartCard chartData={RevenuChartCardData} />
                             </Grid>
+                          
                             <Grid item xs={12} sm={6} lg={4}>
-                                <RevenuChartCard chartData={RevenuChartCardData} />
+                               <Card  style={{padding:"20px 50px", border:"1px solid #cecece"}}>
+                                   <h3>Quick Actions</h3>
+                                   <p>Perform quick and easy action from here</p>
+                               <Grid container spacing={gridSpacing}>
+                                    <Grid item xs={12} sm={6} lg={12}>
+                                        <ButtonIcon icon={<FaIcons.FaWallet />} title="See Wallet" />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6} lg={12}>
+                                        <ButtonIcon icon={<FaIcons.FaPhoneAlt />} title="Call support" />
+                                    </Grid>
+                                    <Grid item xs={12} sm={6} lg={12}>
+                                        <ButtonIcon icon={<FaIcons.FaGlobe />} title="Customer map" />
+                                    </Grid>
+                                </Grid>
+
+                               </Card>
                             </Grid>
                         </Grid>
                     </Grid>
