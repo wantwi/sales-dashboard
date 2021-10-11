@@ -42,12 +42,17 @@ const useStyles = makeStyles((theme) => ({
             width: drawerWidth + 150,
             flexShrink: 0,
         },
+        [theme.breakpoints.down('sm')]: {
+            width:"100%",
+            flexShrink: 0,
+        },
     },
     box:{
             width:45,
             height:45,
-            marginTop:30,
-            marginLeft:30,
+            marginTop:10,
+            marginBottom:30,
+           
             border: '1px solid #cecece',
       
     },
@@ -125,10 +130,11 @@ const MainLayout = (props) => {
             </Hidden>
             <Divider />
             <PerfectScrollbar className={classes.ScrollHeight}>
+            <Card elevation={0} style={{padding:30}}>
             <Card className={classes.box}>
-                <MuIcons.MdOutlineClose style={{margin:"15px", color:"#808080"}}/>
+                <MuIcons.MdOutlineClose style={{margin:"15px ", color:"#808080"}}/>
             </Card>
-                <Box sx={{ flexGrow: 1 }} style={{padding:30,marginTop:-25}}>
+                <Box sx={{ flexGrow: 1 }} style={{padding:0,marginTop:-25}}>
                     <Grid container spacing={2}>
                         <Grid item xs={8}>
                             <h1>Messages</h1>
@@ -145,13 +151,13 @@ const MainLayout = (props) => {
                         </Grid>
                     </Grid>
                 </Box>
-                <div style={{marginTop:-50}}>
+                <div style={{marginTop:-30}}>
                 {mess.map((value, index) => (
                     <MessageCard key={index} {...value} />
                 ))}
 
 
-                <div style={{padding:"0px 30px 0 30px"}}>
+                <div style={{padding:"0px "}}>
                     <h3>Your Schedule</h3>
                     <div style={{background:"#f3f5f7", padding:10,borderRadius:20}}>
                       
@@ -170,14 +176,15 @@ const MainLayout = (props) => {
                 isMeeting? data.map((value, index) => (
                     <ScheduleCard key={index} {...value} />
                 ))
-                :<h4 style={{marginLeft:30}}>No events</h4>
+                :<h4 style={{marginLeft:0}}>No events</h4>
                 }
-                  <div style={{padding:"0px 30px 0 30px"}}>
+                  <div style={{padding:"0px 0px 0 0px"}}>
                   <Button  style={{textTransform: 'none',background:"#e0f5fe",borderRadius:"10px", height:"50px", color:"#7cc8e1",width:"100%"}}  variant="contain">Add new event</Button>
 
                   </div>
                
                 </div>
+                </Card>
                
             </PerfectScrollbar>
         </React.Fragment>
@@ -187,18 +194,9 @@ const MainLayout = (props) => {
 
     return (
         <nav className={classes.drawer} aria-label="mailbox folders">
-            <Drawer
-                container={container}
-                variant={matchUpMd ? 'persistent' : 'temporary'}
-                anchor="right"
-                open={drawerOpen}
-                elevation={0}
-                onClose={drawerToggle}
-                classes={{ paper: classes.drawerPaperLight }}
-                ModalProps={{ keepMounted: true }}
-            >
+          
                 {drawer}
-            </Drawer>
+          
         </nav>
     );
 };

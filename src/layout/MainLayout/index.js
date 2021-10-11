@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             marginLeft: -drawerWidth,
             width: `calc(100% - ${drawerWidth}px)`,
+           
         },
     },
     contentShift: {
@@ -40,11 +41,13 @@ const useStyles = makeStyles((theme) => ({
             duration: theme.transitions.duration.enteringScreen,
         }),
         marginLeft: 0,
+       
     },
     main: {
         padding: theme.spacing(5),
         [theme.breakpoints.down('sm')]: {
             padding: theme.spacing(3),
+            display:"none"
         },
     },
     header: {
@@ -126,7 +129,7 @@ const MainLayout = ({ children }) => {
                     {children}
                 </div>
             </main>
-            <MessageSideBar drawerOpen={drawerOpen} drawerToggle={handleDrawerToggle} />
+            <MessageSideBar />
         </div>
     );
 };

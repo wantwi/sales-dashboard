@@ -38,15 +38,15 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     flatcardblock: {
-        padding: '25px 25px',
-        borderLeft: '1px solid' + theme.palette.background.default,
-        [theme.breakpoints.down('xs')]: {
-            borderLeft: 'none',
-            borderBottom: '1px solid' + theme.palette.background.default,
-        },
-        [theme.breakpoints.down('sm')]: {
-            borderBottom: '1px solid' + theme.palette.background.default,
-        },
+        // padding: '25px 25px',
+        // borderLeft: '1px solid' + theme.palette.background.default,
+        // [theme.breakpoints.down('xs')]: {
+        //     borderLeft: 'none',
+        //     borderBottom: '1px solid' + theme.palette.background.default,
+        // },
+        // [theme.breakpoints.down('sm')]: {
+        //     borderBottom: '1px solid' + theme.palette.background.default,
+        // },
     },
     textsuccess: {
         color: theme.palette.success.main,

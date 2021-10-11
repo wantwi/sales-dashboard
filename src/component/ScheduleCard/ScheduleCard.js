@@ -5,7 +5,7 @@ import { Card, Grid } from '@material-ui/core';
 
 function ScheduleCard({images, title,day,time,background,type}) {
     return (
-        <Card style={{ width: '85%', margin: '20px auto',background, padding: "20px", border:"1px solid #cecece", position:"relative" }}>
+        <Card style={{  margin: '20px auto',background, padding: "20px", border:"1px solid #cecece", position:"relative" }}>
             <h4 style={{ padding: 0,margin:0 }}>{title}</h4>
             <span style={{ fontSize: 11,padding:0, color:"#808080",margin:0 }}>{day}, {time}</span>
             <div>

@@ -4,7 +4,7 @@ import user from '../../assets/images/users/avatar-1.jpg';
 
 function MessageCard({name,message,time,image}) {
     return (
-        <Card style={{ width: '85%', margin: '20px auto',background:"#f4f6f8", padding: "20px", border:"1px solid #cecece", position:"relative" }}>
+        <Card style={{  margin: '20px auto',background:"#f4f6f8", padding: "20px", border:"1px solid #cecece", position:"relative" }}>
             <Grid container spacing={2}>
                 <Grid item>
                     <img src={image} style={{ width: 50, height: 50, borderRadius: 50 }} />
