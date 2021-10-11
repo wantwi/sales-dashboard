@@ -10,26 +10,36 @@ const RevenuChartCard = (props) => {
     const { chartData } = props;
 
     return (
-        <Card>
-            <CardHeader
+        <Card style={{background:"#e3f2fd"}}>
+            {/* <CardHeader
                 title={
                     <Typography t="div" className="card-header">
-                        Total Revenue
+                       Revenue
                     </Typography>
+                    
                 }
-            />
-            <Divider />
-            <CardContent>
+            /> */}
+
+            <div style={{paddingLeft:20}}>
+            <h4>
+                       Revenue
+                    </h4>
+            <p style={{width:147,fontSize:11,lineHeight:1.5,marginTop:-5}}>
+               Alexandra, your revenu for this week was 
+               <span style={{color: "#1dcc90"}}> $19,032.11</span>
+           </p>
+            </div>
+            <CardContent >
                 <Grid container spacing={2} direction={matchDownMd && !matchDownXs ? 'row' : 'column'}>
                     <Grid item xs={12} sm={7} md={12}>
-                        <Chart {...chartData} />
+                        <Chart   {...chartData} />
                     </Grid>
-                    <Hidden only="sm">
+                    {/* <Hidden only="sm">
                         <Grid item>
                             <Divider />
                         </Grid>
-                    </Hidden>
-                    <Grid
+                    </Hidden> */}
+                    {/* <Grid
                         item
                         container
                         direction={matchDownMd && !matchDownXs ? 'column' : 'row'}
@@ -65,7 +75,7 @@ const RevenuChartCard = (props) => {
                                 </Typography>
                             </Grid>
                         </Grid>
-                    </Grid>
+                    </Grid> */}
                 </Grid>
             </CardContent>
         </Card>

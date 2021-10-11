@@ -69,7 +69,7 @@ const Default = () => {
                             primary="1,024"
                             secondary="All Earnings"
                             color="#6F29CC"
-                            background="#C9A4F4"
+                            background="#c9c3ef"
                             footerData="15%"
                             iconPrimary={BaIcon.BsFillCartFill}
                             iconFooter={TrendingUpIcon}
@@ -79,7 +79,7 @@ const Default = () => {
                         <ReportCard
                             primary="$19,023.11"
                             secondary="Task"
-                            background="#ebf4fe"
+                            background="#f0fbfe"
                             size="30px"
                             color={theme.palette.primary.main}
                             footerData="27%"
@@ -120,11 +120,11 @@ const Default = () => {
                             </Grid>
                           
                             <Grid item xs={12} sm={6} lg={4}>
-                               <Card  style={{padding:"20px 50px", border:"1px solid #cecece"}}>
+                               <Card  style={{padding:"20px 50px", border:"1px solid #cecece",height:460}}>
                                    <h3>Quick Actions</h3>
                                    <p>Perform quick and easy action from here</p>
                                <Grid container spacing={gridSpacing}>
-                                    <Grid item xs={12} sm={6} lg={12}>
+                                    <Grid item xs={12} sm={6} lg={12} style={{marginTop:25}}>
                                         <ButtonIcon icon={<FaIcons.FaWallet />} title="See Wallet" />
                                     </Grid>
                                     <Grid item xs={12} sm={6} lg={12}>

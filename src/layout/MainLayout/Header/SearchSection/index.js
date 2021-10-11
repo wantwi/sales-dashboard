@@ -178,6 +178,7 @@ const SearchSection = () => {
                                     </Fade>
                                 )}
                             </Popper>
+                          
                         </React.Fragment>
                     )}
                 </PopupState>
@@ -194,7 +195,9 @@ const SearchSection = () => {
                     }}
                     inputProps={{ 'aria-label': 'search' }}
                 />
+               
             </Hidden>
+           
         </div>
     );
 };

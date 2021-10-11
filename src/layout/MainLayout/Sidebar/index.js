@@ -1,8 +1,9 @@
 import React from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { makeStyles, useMediaQuery, useTheme, Divider, Drawer, Grid, Hidden } from '@material-ui/core';
+import { makeStyles, useMediaQuery, useTheme, Divider, Drawer, Grid, Hidden,Card } from '@material-ui/core';
 
 import MenuList from './MenuList';
+import star from "../../../assets/images/star.jpg"
 
 import logo from './../../../assets/images/logo.svg';
 import { drawerWidth } from './../../../store/constant';
@@ -94,7 +95,15 @@ const MainLayout = (props) => {
                
             >
                 {drawer}
+
+                <Card elevation={3} style={{width:"150px", height:"150px", margin:"0 auto 100px auto",padding:"20px 20px 50px 20px"}}>
+                  
+                   <img src={star} alt="star" style={{width:50,height:50, marginLeft:25}}/>
+                   <p style={{fontSize:10.5,color:"#808080",lineHeight:1.5}}>Your rating would mean a lot to us!</p>
+            </Card>
             </Drawer>
+
+           
         </nav>
     );
 };

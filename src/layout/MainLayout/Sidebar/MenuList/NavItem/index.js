@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
     listItem: {
         borderRadius: '5px',
-        marginBottom: '5px',
+        marginBottom: '15px',
     },
     subMenuCaption: {
         ...theme.typography.subMenuCaption,
