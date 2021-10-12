@@ -5,6 +5,7 @@ import { makeStyles, Grid, useMediaQuery, useTheme, AppBar, CssBaseline, Toolbar
 import { drawerWidth } from './../../store/constant';
 import Header from './Header';
 import Sidebar from './Sidebar';
+import Footer from "./footer"
 import MessageSideBar from './MessageSideBar';
 
 const useStyles = makeStyles((theme) => ({
@@ -127,9 +128,11 @@ const MainLayout = ({ children }) => {
                     </Grid>
 
                     {children}
+                    <Footer/>
                 </div>
+              
             </main>
-            <MessageSideBar />
+            <MessageSideBar/>
         </div>
     );
 };

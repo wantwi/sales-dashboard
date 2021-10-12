@@ -38,6 +38,7 @@ const data = [
 
 const useStyles = makeStyles((theme) => ({
     drawer: {
+        borderLeft:"1px solid #cecece",
         [theme.breakpoints.up('md')]: {
             width: drawerWidth + 150,
             flexShrink: 0,
@@ -80,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
         borderLeft: '1px solid #cecece',
         // boxShadow: '0 0.15rem 1.75rem 0 rgba(33, 40, 50, 0.15)',
         top: '0px',
+      
         [theme.breakpoints.down('sm')]: {
             top: 0,
         },
